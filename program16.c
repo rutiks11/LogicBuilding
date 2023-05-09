@@ -1,0 +1,20 @@
+// Display 1 to 5
+
+#include <stdio.h>      // For printf scanf 
+
+/////////////////////////////////////////////////////////////////////////
+//  Entry Point Function
+/////////////////////////////////////////////////////////////////////////
+
+int main()
+{   
+    int iCnt = 0;
+
+    for(iCnt = 1; iCnt <= 5; iCnt++)
+    {
+        printf("%d\n", iCnt);
+    }
+    
+    return 0;
+
+}
