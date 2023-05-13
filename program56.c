@@ -24,13 +24,13 @@ bool ChkDigit(int iNo)
         iNo = iNo / 10;         // Self Updating Statement
     }
     
-    if(iDigit == 0)
+    if(iDigit == 8)
     {
-        return false;
+        return true;
     }
     else
     {
-        return true;
+        return false;
     }
 }
 
