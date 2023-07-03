@@ -1,5 +1,5 @@
 // void Demo(int *Arr, int iLength)
-// Write a program to check number in array are odd
+// Write a program to print odd numbers in array
 
 #include<stdio.h>   // IO
 #include<stdlib.h>  // Memory Management

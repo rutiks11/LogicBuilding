@@ -1,4 +1,14 @@
 //  normal loop 
+/*  
+    Factorial
+    iNo = 5;
+    
+    5!
+    
+    Factorial = 5 * 4 * 3 * 2 * 1   = 120
+
+    Factorial = 1 * 2 * 3 * 4 * 5   = 120
+*/
 
 #include <stdio.h>
 

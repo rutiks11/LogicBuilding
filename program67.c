@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-float MinimumDigit(int iNo)
+int MinimumDigit(int iNo)
 {   
   
     int iDigit = 0;
@@ -29,9 +29,7 @@ float MinimumDigit(int iNo)
 
         iNo = iNo / 10;
     }
-
     return iMin;
-
 }
 
 int main()

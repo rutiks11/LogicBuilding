@@ -1,5 +1,5 @@
 // void Demo(int *Arr, int iLength)
-// Write a program to check numbers in array are even 
+// Write a program to accept array and return sum of array 
 
 #include<stdio.h>   // IO
 #include<stdlib.h>  // Memory Management

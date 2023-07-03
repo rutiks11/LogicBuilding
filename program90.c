@@ -1,0 +1,81 @@
+// Write a program to accept n number and accept element for search and return its first occurence index
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int SearchFirstOccurence(int Arr[], int iLength, int iSearch)
+{
+   int iCnt = 0;
+    
+   for(iCnt = 0; iCnt < iLength; iCnt++)
+   {
+    if(Arr[iCnt] == iSearch)
+    {   
+        break;
+    }
+   }
+
+    if(iCnt == iLength)
+    {
+        return -1;
+    }
+    else
+    {
+        return iCnt;
+    }
+}
+
+int main()
+{
+    int iSize = 0;
+    int *ptr = NULL;
+    int iCnt = 0;
+    int iValue = 0;
+    int iRet = 0;
+
+    // Step 1 : Accept Number of Elements
+    printf("Enter the Number of Elements\n");
+    scanf("%d",&iSize);
+
+    // Step 2 : 
+    ptr = (int *)malloc(sizeof(int) * iSize);
+
+    if(ptr == NULL)
+    {
+        printf("Memory Not Allocated\n");
+        return -1;
+    }
+
+    printf("Enter the Elements\n");
+    for(iCnt = 0; iCnt < iSize; iCnt++)
+    {
+        scanf("%d",&ptr[iCnt]);      // Consider ptr as array
+    }
+
+    printf("Elements of Array are :\n");
+    for(iCnt = 0; iCnt < iSize; iCnt++)
+    {
+        printf("%d\n",ptr[iCnt]);
+    }
+
+    
+    printf("Enter the Element that You want to Search\n");
+    scanf("%d",&iValue);
+
+    iRet = SearchFirstOccurence(ptr,iSize,iValue);
+
+    if(iRet == -1)
+    {
+        printf("There is No such Element\n");
+    }
+    else
+    {
+        printf("%d is at index %d",iValue, iRet);
+    }
+    
+
+    free(ptr);
+
+    return 0;
+}
