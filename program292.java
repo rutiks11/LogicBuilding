@@ -1,0 +1,70 @@
+// Accept number of elements allocate dynamically elements
+// Display Number
+
+// Approach 2
+
+import java.util.*;
+
+class ArrayX
+{
+    public int Arr[];
+
+    public ArrayX(int iSize)
+    {
+        Arr = new int[iSize];      // Initialize the Variable
+    }
+
+    public void Accept()
+    {
+        Scanner sobj = new Scanner(System.in);
+        
+        System.out.println("Enter the Elements : ");
+        
+        for(int iCnt = 0; iCnt < Arr.length;iCnt++)
+        {
+            Arr[iCnt] = sobj.nextInt();
+        }
+    }
+
+    public void Display()
+    {
+        System.out.println("Elements of Array : ");
+        
+        for(int iCnt = 0; iCnt < Arr.length;iCnt++)
+        {
+            System.out.println(Arr[iCnt]+"\t");
+        } 
+        System.out.println(); 
+    }
+
+    public int summation()
+    {
+        int iSum = 0;
+
+        for(int iCnt =0; iCnt < Arr.length; iCnt++)
+        {
+            iSum = iSum + Arr[iCnt];
+        }
+        return iSum;
+    }
+}
+
+class program292
+{
+    public static void main(String args[])
+    {   
+        Scanner sobj = new Scanner(System.in); 
+
+        System.out.println("Enter number of Elements : ");
+        int iSize = sobj.nextInt();
+
+        ArrayX aobj = new ArrayX(iSize);
+        
+        int iRet = 0;
+
+        aobj.Accept();
+        aobj.Display();
+        
+        System.out.println("Summation of all elements "+aobj.summation());
+    }
+}
